@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>伪代码实现Vue源码功能</title>
+</head>
+<body>
+	<div id="app" style="text-align: center;">
+        <input v-model="text">
+        <p>{{text}}</p>
+        <button v-on:click="clickMe">点我啊!</button>
+        <p><span>已点击次数：</span>{{num}}</p>
+	</div>
+</body>
+<script src="./js/observer.js"></script>
+<script src="./js/watcher.js"></script>
+<script src="./js/compile.js"></script>
+<script src="./js/index.js"></script>
+<script>
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			text: 'hello world',
+			num:0
+		},
+		methods: {
+			clickMe: function () {
+				this.num++;
+			}
+		},
+		mounted: function () {
+			console.log('加载完毕')
+		}
+	})
+</script>
+</html>
