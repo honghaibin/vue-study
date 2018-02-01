@@ -8,7 +8,7 @@ Vue框架的底层是使用es5的`Object.defineProperty()`方法来实现观察�
 
 Vue原理图：
 
-![观察者模式](https://leanote.com/api/file/getImage?fileId=5a712dcaab644110b7000a10)
+![观察者模式之Vue原理](https://github.com/honghaibin/vue-study/tree/master/fake-code-of-vue/vue原理.png)
 
 # 功能分析
 这次主要针对Vue的数据双向绑定（v-model），指令和生命周期`mounted`功能的实现。我们都知道，Vue的使用很简单，直接`new Vue(options)`new一个vue实例。所以我们需要分清楚功能文件：
